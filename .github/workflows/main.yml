@@ -3,11 +3,16 @@ name: SPFx WebParts CICD with Office 365 CLI
 on: 
  watch:
     types: [started]
+    
+ push:
+    branches:
+        -master
+ 
 
 # Variables that are available for all the jobs in the workflow
 env:
   APP_FILE_PATH: '**/*.sppkg'
-  SAMPLE_TO_BUILD_DEPLOY: './samples/react-aad-webapi/webpart'
+  SAMPLE_TO_BUILD_DEPLOY: './samples/react-accordion'
   SEND_MAIL: 'false'
 
 jobs:
