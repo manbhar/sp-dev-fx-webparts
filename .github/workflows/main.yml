@@ -53,7 +53,7 @@ jobs:
       id: get-pkgname
       run: |
         echo ::set-output name=pkgname::$(find . -name *.sppkg)
-        echo $ find . -mindepth 1 -type f -name "*.sppkg" -exec printf x \; | wc -c
+        echo $ find . -name "*.sppkg" | wc -l
     - name: Use the output
       run: |
         echo 'The output pkgname is ${{ steps.get-pkgname.outputs.pkgname }}'     
