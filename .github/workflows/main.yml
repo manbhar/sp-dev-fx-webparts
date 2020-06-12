@@ -54,7 +54,7 @@ jobs:
       run: |
         echo ::set-output name=pkgname::$(find . -name *.sppkg)
         echo $ find . -name "*.sppkg" | wc -l
-        echo ls
+        echo $(ls)
     - name: Use the output
       run: |
         echo 'The output pkgname is ${{ steps.get-pkgname.outputs.pkgname }}'     
