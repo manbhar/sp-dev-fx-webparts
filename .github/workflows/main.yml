@@ -10,7 +10,7 @@ on:
 # Variables that are available for all the jobs in the workflow
 env:
   APP_FILE_PATH: '**/*.sppkg'
-  SAMPLE_TO_BUILD_DEPLOY: './samples/react-accordion'
+  SAMPLE_TO_BUILD_DEPLOY: './samples/react-aad-implicitflow'
   SEND_MAIL: 'false'
 
 jobs:
