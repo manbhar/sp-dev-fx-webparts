@@ -54,6 +54,13 @@ jobs:
       run: |
         echo ::set-output name=pkgname::$(find . -name *.sppkg)
         echo $(find . -name "*.sppkg") 
+   
+    - name: Publish package to artifact
+      uses: actions/checkout@v2
+      with:
+       name: 'SharePoint Packages'
+       path: pkgname
+    
     - name: Use the output
       run: |
         echo 'The output pkgname is ${{ steps.get-pkgname.outputs.pkgname }}'     
